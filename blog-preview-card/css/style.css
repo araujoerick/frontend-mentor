@@ -30,6 +30,11 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  transition: 0.4s;
+}
+
+.card-container:hover {
+  box-shadow: 15px 15px #000;
 }
 
 .card-activity {
@@ -54,6 +59,7 @@ img {
 
 .card-title a:hover {
   color: #f5d04e;
+  transition: 0.2s;
 }
 
 .card-text {
