@@ -17,7 +17,6 @@ img {
   max-width: 100%;
   display: block;
   border-radius: 12px;
-  margin-bottom: 8px;
 }
 
 .card-container {
@@ -37,6 +36,10 @@ img {
   box-shadow: 15px 15px #000;
 }
 
+.card-image {
+  margin-bottom: 10px;
+}
+
 .card-activity {
   padding: 6px 12px;
   background-color: #f5d04e;
@@ -51,6 +54,7 @@ img {
 
 .card-title a {
   text-decoration: none;
+  transition: 0.2s;
 }
 
 .card-title a:visited {
@@ -59,21 +63,24 @@ img {
 
 .card-title a:hover {
   color: #f5d04e;
-  transition: 0.2s;
 }
 
 .card-text {
   color: hsl(0, 0%, 50%);
 }
 
-.card-profile img {
-  max-width: 32px;
-}
-
 .card-profile {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.card-profile img {
+  max-width: 32px;
+}
+.card-profile span {
+  display: inline-block;
 }
 
 .card-profile span,
