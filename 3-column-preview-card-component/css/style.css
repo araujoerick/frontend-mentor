@@ -1,0 +1,133 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+
+.color-orange {
+  color: var(--brightOrange);
+}
+
+.color-cyan {
+  color: var(--darkCyan);
+}
+
+.color-darkCyan {
+  color: var(--veryDarkCyan);
+}
+
+.color-veryLightGray {
+  color: var(--veryLightGray);
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--veryLightGray);
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-container {
+  display: flex;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  padding: 2.5rem;
+}
+
+.bg-orange {
+  background-color: var(--brightOrange);
+}
+.bg-cyan {
+  background-color: var(--darkCyan);
+}
+.bg-darkCyan {
+  background-color: var(--veryDarkCyan);
+}
+
+.card:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.card:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.card h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.625rem;
+  text-transform: uppercase;
+}
+
+.card p {
+  max-width: 23ch;
+  color: var(--transparentWhite);
+  margin-bottom: 48px;
+  flex: 1;
+}
+
+.card a {
+  background-color: var(--veryLightGray);
+  border: 2px solid var(--veryLightGray);
+  padding: 12px 24px;
+  border-radius: 24px;
+}
+
+.card a:hover {
+  color: var(--veryLightGray);
+  background-color: transparent;
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 0;
+    height: auto;
+  }
+  .card:first-child {
+    border-radius: 6px 6px 0 0;
+  }
+
+  .card:last-child {
+    border-radius: 0 0 6px 6px;
+  }
+  .card-container {
+    flex-direction: column;
+    margin: 1.5rem;
+  }
+
+  .card {
+    gap: 1.5rem;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    max-width: 25ch;
+  }
+}
