@@ -1,0 +1,97 @@
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(0, 0%, 20%);
+  --darkGray: hsl(0, 0%, 12%);
+  --offBlack: hsl(0, 0%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--offBlack);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 0.875rem;
+}
+
+.card {
+  background-color: var(--darkGray);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.card-pic {
+  width: 75px;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.card-subtitle {
+  color: var(--green);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-aboutMe {
+  margin-bottom: 0.75rem;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+.card-links a {
+  display: block;
+  background-color: var(--gray);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.card-links a:hover {
+  background-color: var(--green);
+  color: var(--darkGray);
+}
+
+@media (max-width: 400px) {
+  .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
