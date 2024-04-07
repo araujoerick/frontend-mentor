@@ -1,0 +1,148 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --lightRed: hsl(0, 100%, 67%);
+  --offWhite: hsl(0, 0%, 94%);
+  --lightGrey: hsl(0, 0%, 86%);
+  --smokeyGrey: hsl(0, 1%, 44%);
+  --offBlack: hsl(0, 0%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--offWhite);
+}
+
+.container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1rem 1rem 10rem 1rem;
+}
+
+form {
+  display: flex;
+  gap: 1.875rem;
+  text-transform: uppercase;
+}
+
+form div {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--smokeyGrey);
+}
+
+input[type="number"] {
+  padding: 0.875rem;
+  border-radius: 0.625rem;
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 150px;
+  border: 1px solid var(--lightGrey);
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border: 1px solid var(--purple);
+}
+
+.displayDate {
+  font-size: 6rem;
+  line-height: 1.1;
+  padding-right: 10rem;
+}
+
+.displayDate span {
+  color: var(--purple);
+}
+
+.button {
+  border: none;
+  background-color: var(--purple);
+  padding: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--offBlack);
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.buttonContainer::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: var(--lightGrey);
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 3rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem 1rem 7rem 1rem;
+  }
+  form {
+    margin-bottom: 2rem;
+  }
+  input[type="number"] {
+    max-width: 110px;
+    font-size: 1.5rem;
+  }
+  .buttonContainer {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .button {
+    padding: 1rem;
+  }
+  .displayDate {
+    padding-right: 0;
+    font-size: 4rem;
+  }
+  .buttonContainer::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: var(--lightGrey);
+  }
+  .buttonContainer::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: var(--lightGrey);
+  }
+}
