@@ -114,6 +114,7 @@ input[type="number"]:focus {
     border-radius: 1rem 1rem 7rem 1rem;
   }
   form {
+    gap: 1.5rem;
     margin-bottom: 2rem;
   }
   input[type="number"] {
@@ -144,5 +145,28 @@ input[type="number"]:focus {
     height: 1px;
     display: block;
     background: var(--lightGrey);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 2.5rem 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem 1rem 7rem 1rem;
+  }
+  form {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  div label {
+    font-size: 0.875rem;
+  }
+  input[type="number"] {
+    max-width: 100px;
+    font-size: 1rem;
+  }
+  .displayDate {
+    padding-right: 0;
+    font-size: 3.5rem;
   }
 }
