@@ -7,13 +7,29 @@ document.querySelector(".button").addEventListener("click", (e) => {
 
   const resultado = calcularIdade(ano, mes, dia);
 
-  const anos = document.querySelector(".years span");
-  const meses = document.querySelector(".months span");
-  const dias = document.querySelector(".days span");
+  function animaNumeros(span, valorFinal) {
+    let currentValue = 0;
+    let increment = 1;
+    let interval = setInterval(() => {
+      currentValue += increment;
 
-  anos.innerText = resultado.anos;
-  meses.innerText = resultado.meses;
-  dias.innerText = resultado.dias;
+      if (currentValue >= valorFinal) {
+        currentValue = valorFinal;
+        clearInterval(interval);
+      }
+
+      span.innerText = currentValue;
+    }, 40);
+  }
+
+  function atualizaValor(seletor, valor) {
+    let span = document.querySelector(seletor);
+    animaNumeros(span, valor);
+  }
+
+  atualizaValor(".years span", resultado.anos);
+  atualizaValor(".months span", resultado.meses);
+  atualizaValor(".days span", resultado.dias);
 });
 
 function calcularIdade(ano, mes, dia) {
