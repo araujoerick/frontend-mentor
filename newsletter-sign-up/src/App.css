@@ -1,0 +1,137 @@
+:root {
+  --c1: hsl(4, 100%, 67%);
+  --c2: hsl(234, 29%, 20%);
+  --c3: hsl(235, 18%, 26%);
+  --c4: hsl(231, 7%, 60%);
+  --c5: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h1,
+p {
+  color: var(--c2);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--c2);
+}
+
+.container {
+  background: var(--c5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  margin-inline: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem 0 2.5rem;
+  max-width: 50ch;
+}
+
+.container img {
+  justify-self: end;
+}
+
+.content li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.content li::before {
+  content: "";
+  height: 21px;
+  width: 21px;
+  background: url(./images/icon-list.svg);
+  display: inline-block;
+}
+
+form label {
+  width: calc(100% - 110px);
+}
+
+form label,
+form span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+form label + span {
+  color: hsl(6, 100%, 68%);
+  & + input {
+    background: hsl(5, 100%, 92%);
+    color: hsl(6, 100%, 68%);
+    border: 1px solid hsl(6, 100%, 68%);
+  }
+}
+
+form span {
+  text-align: end;
+  /* margin-left: 10%; */
+  align-self: flex-end;
+}
+
+form input {
+  min-width: 100%;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  border: 1px solid var(--c4);
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+form input:focus {
+  border: 1px solid var(--c2);
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: var(--c2);
+  color: var(--c5);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+form button:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(347, 100%, 66%),
+    hsl(16, 98%, 60%)
+  );
+}
