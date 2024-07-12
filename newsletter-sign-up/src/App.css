@@ -115,7 +115,7 @@ form input:focus {
   border: 1px solid var(--c2);
 }
 
-form button {
+.button {
   display: block;
   width: 100%;
   padding: 1rem;
@@ -128,10 +128,38 @@ form button {
   font-weight: 700;
 }
 
-form button:hover {
+.button:hover {
   background-image: linear-gradient(
     to right,
     hsl(347, 100%, 66%),
     hsl(16, 98%, 60%)
   );
+}
+
+.hidden {
+  display: none;
+}
+
+/* Thanks Popup */
+.thanks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--c5);
+  padding: 4rem;
+  border-radius: 2rem;
+  margin-inline: 1rem;
+  max-width: 55ch;
+}
+
+.thanks h1 {
+  line-height: 1;
+}
+
+.thanks span {
+  font-weight: bold;
+}
+
+.thanks img {
+  width: 64px;
 }
