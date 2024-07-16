@@ -22,6 +22,7 @@ img {
 
 h1 {
   font-size: 3.5rem;
+  line-height: 1;
 }
 
 h1,
@@ -51,18 +52,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 0 2rem 0 2.5rem;
+  padding: 2rem 2rem 2rem 2.5rem;
   max-width: 50ch;
 }
 
-.container img {
+.desktop-image {
   justify-self: end;
 }
 
 .content li {
   margin-bottom: 0.8rem;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 0.875rem;
 }
 
@@ -70,7 +71,7 @@ body {
   content: "";
   height: 21px;
   width: 21px;
-  background: url(./images/icon-list.svg);
+  background: url(./images/icon-list.svg) center;
   display: inline-block;
 }
 
@@ -152,14 +153,60 @@ form input:focus {
   max-width: 55ch;
 }
 
-.thanks h1 {
-  line-height: 1;
-}
-
 .thanks span {
   font-weight: bold;
 }
 
 .thanks img {
   width: 64px;
+}
+
+@media screen and (max-width: 920px) {
+  h1 {
+    font-size: 3rem;
+  }
+  form input {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .mobile-image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 0;
+  }
+  .desktop-image {
+    display: none;
+  }
+  .mobile-image {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    min-height: auto;
+    background: none;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .mobile-image {
+    min-width: 100vw;
+  }
+  .content {
+    padding: 3rem 2rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
 }

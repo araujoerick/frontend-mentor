@@ -3,6 +3,7 @@ import Input from "./Form/Input";
 import useForm from "./Hooks/useForm";
 import "./App.css";
 import bgDesktop from "./images/illustration-sign-up-desktop.svg";
+import bgMobile from "./images/illustration-sign-up-mobile.svg";
 import iconSuccess from "./images/icon-success.svg";
 
 const App = () => {
@@ -28,13 +29,20 @@ const App = () => {
   return (
     <>
       <section className={classContainer}>
+        <img className="mobile-image" src={bgMobile} alt="" />
         <div className="content">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+            <li>
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li>
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li>
+              <p>And much more!</p>
+            </li>
           </ul>
           <form onSubmit={handleSubmit}>
             <Input
@@ -47,7 +55,7 @@ const App = () => {
             <button className="button">Subscribe to monthly newsletter</button>
           </form>
         </div>
-        <img src={bgDesktop} alt="" />
+        <img className="desktop-image" src={bgDesktop} alt="" />
       </section>
       {showConfirmeMsg && (
         <section className="thanks">
